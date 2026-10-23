@@ -6,7 +6,7 @@
 <header><h1>Национален регистър · Онлайн администрация</h1><p>Попълни полетата и натисни „Запази“ — записът се публикува в GitHub</p></header>
 <main>
 <section id="auth"><h2>Вход за администратори (еднократно за тази сесия)</h2>
-<p class="muted">Използвай <strong>GitHub fine-grained personal access token</strong> с разрешение <strong>Contents: Read and write</strong> само за хранилището <code>zimenduh-bot/zimenduh-bot.github.io</code>. Не споделяй токена с никого. Той не се записва в браузъра.</p>
+<p class="muted">Използвай <strong>GitHub fine-grained personal access token</strong> с разрешение <strong>Contents: Read and write</strong> само за хранилището <code>nacionalen-registar-bg/nacionalen-registar-bg.github.io</code>. Не споделяй токена с никого. Той не се записва в браузъра.</p>
 <label for="token">GitHub токен (поставя се само тук)</label><input id="token" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_...">
 <div class="toolbar"><button id="connect">Свържи се и зареди записите</button><button class="secondary" id="logout" type="button">Изход / изчисти токена</button><a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">Създай ограничен GitHub токен</a></div>
 <div class="status" id="status">Панелът не е свързан. Публичният сайт остава достъпен за всички.</div>
@@ -40,7 +40,7 @@
 </main>
 <script>
 (()=>{'use strict';
-const REPO='zimenduh-bot/zimenduh-bot.github.io', API='https://api.github.com/repos/'+REPO+'/contents/index.html';
+const REPO='nacionalen-registar-bg/nacionalen-registar-bg.github.io', API='https://api.github.com/repos/'+REPO+'/contents/index.html';
 const $=id=>document.getElementById(id), names=['type','name','region','municipality','city','neighborhood','street','postcode','fullAddress','phones','emails','website','facebook','fax','source','notes'];
 let auth='', fullHtml='', sha='', db=[], dirty=false, editing=-1, currentPage=0;
 const PAGE=45;
