@@ -82,7 +82,7 @@ const wc=localStorage.getItem('registry_weather_city');if(wc&&[...document.getEl
       const dl=$('dContent').querySelector('.detail-grid'),dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent='Координати';dd.textContent=r.latitude+', '+r.longitude;dl.append(dt,dd);
       const map=$('dContent').querySelector('.primary-action');if(map)map.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(r.latitude+','+r.longitude);
     }
-    const actions=$('dContent').querySelector('.detail-actions'),edit=document.createElement('button');edit.type='button';edit.textContent='Редактирай записа';edit.onclick=()=>{closeDetail();openRecordEditor(r)};actions.prepend(edit);
+    const actions=$('dContent').querySelector('.detail-actions'),edit=document.createElement('button');edit.type='button';edit.textContent='Редактирай записа';edit.onclick=()=>{closeDetail();openRecordEditor(r)};// Бутонът за редактиране е изключен за посетителите.
   };
   const originalSubmit=adminForm.onsubmit;
   adminForm.onsubmit=e=>{
