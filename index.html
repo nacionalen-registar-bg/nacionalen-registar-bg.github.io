@@ -566,6 +566,39 @@ body.nr-services-mode #nr-home-content{display:none!important}
 #nr-culture-news .nr-culture-slide p{font-size:16px!important;line-height:1.7!important}
 #nr-active-widgets .nr-side-widget{max-width:100%!important;min-width:0!important}
 </style>
+<style id="nr-football-culture-layout-repair-2026">
+/* Keep the stories readable and give the busy football programme enough width. */
+@media(min-width:1051px){
+ #nr-discover .nr-discover-grid{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:18px!important}
+ #nr-discover #nr-active-widgets{display:grid!important;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)!important;align-items:start!important;gap:18px!important;grid-column:auto!important;grid-row:auto!important;width:100%!important;max-width:none!important;min-width:0!important}
+ #nr-discover #nr-stories-reading{grid-column:auto!important;grid-row:auto!important;width:100%!important;min-width:0!important}
+ #nr-active-widgets #nr-football-widget{grid-column:1!important;grid-row:1!important}
+ #nr-active-widgets #nr-culture-widget{grid-column:2!important;grid-row:1!important}
+ #nr-active-widgets .nr-feature-sep{display:none!important}
+}
+@media(min-width:701px) and (max-width:1050px){
+ #nr-discover .nr-discover-grid{display:block!important}
+ #nr-discover #nr-active-widgets{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important;margin-top:16px!important;width:100%!important}
+ #nr-active-widgets #nr-football-widget{grid-column:1!important}
+ #nr-active-widgets #nr-culture-widget{grid-column:2!important}
+}
+@media(max-width:700px){
+ #nr-discover .nr-discover-grid{display:block!important}
+ #nr-discover #nr-active-widgets{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:14px!important;margin-top:16px!important;width:100%!important}
+ #nr-active-widgets #nr-football-widget,#nr-active-widgets #nr-culture-widget{grid-column:1!important}
+}
+#nr-active-widgets{min-width:0!important;box-sizing:border-box!important}
+#nr-active-widgets .nr-side-widget{min-width:0!important;max-width:100%!important;box-sizing:border-box!important;overflow:hidden!important}
+#nr-football-widget .nr-widget-controls,#nr-football-widget .nr-program-modes,#nr-culture-widget .nr-widget-controls{display:flex!important;flex-wrap:wrap!important;align-items:center!important;gap:7px!important}
+#nr-football-widget select,#nr-culture-widget select{max-width:100%!important;min-width:0!important;box-sizing:border-box!important}
+#nr-football-widget .nr-match-list{max-height:440px!important;overflow-y:auto!important;overflow-x:hidden!important;min-height:0!important;overscroll-behavior:contain}
+#nr-football-widget .nr-match-list *,#nr-football-widget .nr-match-after *,#nr-culture-widget *{overflow-wrap:anywhere}
+#nr-football-widget .nr-match-after{display:flex!important;flex-wrap:wrap!important;gap:8px!important;align-items:center!important}
+#nr-football-widget .nr-widget-caption,#nr-culture-widget .nr-widget-caption{line-height:1.5!important}
+#nr-culture-widget .nr-culture-slide[hidden]{display:none!important}
+#nr-culture-widget .nr-cultural-events{max-height:340px!important;overflow-y:auto!important;overflow-x:hidden!important}
+#nr-culture-widget .nr-culture-news-nav{display:flex!important;flex-wrap:wrap!important;align-items:center!important;gap:8px!important}
+</style>
 </head><body><div class="compact-info"><div><span id="liveClock">—</span><span class="info-sep"></span><label>Време <select id="weatherCity"><option value="42.6977,23.3219">София</option><option value="42.5048,27.4626">Бургас</option><option value="43.2141,27.9147">Варна</option><option value="42.1354,24.7453">Пловдив</option><option value="43.8356,25.9657">Русе</option><option value="43.0757,25.6172">Велико Търново</option><option value="42.4258,25.6345">Стара Загора</option><option value="43.5726,27.8273">Добрич</option><option value="42.0116,23.0908">Благоевград</option><option value="42.6817,26.3229">Сливен</option></select></label><span id="miniWeather">зареждане…</span><span class="info-spacer"></span><span>EUR/USD <b>1.1567</b></span><span>EUR/GBP <b>0.8545</b></span><span>EUR/CHF <b>0.9390</b></span><a href="https://www.bnb.bg/statistics/stexternalsector/stexchangerates/sterforeigncurrencies/index.htm" rel="noopener" target="_blank">БНБ ↗</a></div></div><header class="top portal-hero"><div class="portal-brand"><div class="portal-kicker">Единен справочник за България</div><h1>Национален регистър</h1><p>Институции, администрации, контакти и услуги на едно място</p></div><button class="hero-mail-cta" id="heroMailCta" type="button"><span class="hero-mail-icon">✉</span><span><strong>Напиши до институция</strong><small>Шаблони за запитване, сигнал, жалба или молба</small></span><span class="hero-mail-arrow">→</span></button><div class="top-actions"><button aria-hidden="true" class="btn hero-admin" hidden="" id="addRecordBtn" style="display:none!important" tabindex="-1" type="button">Админ</button><button class="btn secondary hero-theme" id="themeBtn">◐ Тема</button></div></header><nav class="category-nav"><div class="nav-inner compact-nav"><button class="active" data-home=""><span>⌂</span>Начало</button><button data-type="Институции и ведомства"><span>◆</span>Институции</button><button data-group="local" data-types="Община|Кметство|Район"><span>▦</span>Местна администрация</button><button data-group="health" data-types="Болници и ДКЦ|Аптека"><span>♥</span>Здраве</button><button data-type="Банки"><span>◈</span>Банки</button><button data-type="Магазин"><span>▣</span>Магазини</button></div></nav><div class="institution-subnav" hidden="" id="institutionSubnav"><div><span>Вид учреждение:</span><button class="active" data-inst="">Всички</button><button data-inst="ministries">Министерства</button><button data-inst="district-admin">Областни администрации</button><button data-inst="odmvr">ОДМВР</button><button data-inst="police-units">Районни управления</button><button data-inst="identity">Лични документи</button><button data-inst="migration">Миграция</button><button data-inst="traffic">Пътна полиция</button><button data-inst="security">КОС / ЧОД</button></div></div><div class="local-subnav" hidden="" id="localSubnav"><div><span>Покажи:</span><button class="active" data-local="">Всички</button><button data-local="Община">Общини</button><button data-local="Кметство">Кметства</button></div></div><div class="health-subnav" hidden="" id="healthSubnav"><div><span>Избери подкатегория:</span><button class="active" data-health="">Всички</button><button data-health="Болници и ДКЦ">Болници и ДКЦ</button><button data-health="Аптека">Аптеки</button></div></div><main class="shell"><section aria-label="Услуги" class="nr-services-view" hidden="" id="nr-services-view">
 <div class="nr-services-title"><div><span class="nr-services-kicker">Справочник по теми</span><h2>Услуги</h2><p>Изберете вид услуга, за да видите най-важната информация. Търсенето по име и адрес е на началната страница.</p></div></div>
 <div aria-label="Видове услуги" class="nr-services-cards" id="nr-services-cards"></div>
